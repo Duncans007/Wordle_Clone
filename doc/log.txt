@@ -1,0 +1,6 @@
+2/18
+-create project
+-created "Worldle" class
+-downloaded dictionary from http://www.gwicks.net/dictionaries.htm
+-organized directory structure
+-created main run file for CLI interaction with worldle object
