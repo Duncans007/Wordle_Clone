@@ -1,7 +1,7 @@
 from src.Worldle import Worldle
 
 def main():
-    worldle = Worldle()
+    worldle = Worldle(max_guesses=6, word_length=4)
     while True:
         print(f"Guess {worldle.guesses}: ", end="")
         inp = input()

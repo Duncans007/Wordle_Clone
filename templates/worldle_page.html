@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Worldle!</h1>
+
+    {% for i in range(1,guesses+1) %}
+        {% for j in range(0,word_length) %}
+
+            {% if j == 0 %}
+                <div class = 'box first-box'>
+            {% else %}
+                <div class = 'box'>
+            {% endif %}
+
+                <div class = {{data[i].colors[j]}}>
+                    <div class='white-letter'>
+                        {{data[i].letters[j]}}
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+    {% endfor %}
+
+
+{% endblock content %}

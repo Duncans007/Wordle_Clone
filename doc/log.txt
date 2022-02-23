@@ -1,6 +1,15 @@
 2/18
 -create project
--created "Worldle" class
--downloaded dictionary from http://www.gwicks.net/dictionaries.htm
+-created "Worldle" class (src/Worldle.py)
+-downloaded dictionary from http://www.gwicks.net/dictionaries.htm (ext/dictionary.txt)
 -organized directory structure
--created main run file for CLI interaction with worldle object
+-created main run file for CLI interaction with worldle object (main_cli.py)
+
+2/23
+-added Flask and HTML structure for displaying worldle
+    -main.css, layout.html, worldle_page.html, main_gui.py
+-wrote initial loading and functional control for the worldle gui
+
+# todo add win condition to wordle
+# todo add text insert box and HTML POST for data entry
+# todo add sliders for guesses and word length
