@@ -10,6 +10,11 @@
     -main.css, layout.html, worldle_page.html, main_gui.py
 -wrote initial loading and functional control for the worldle gui
 
-# todo add win condition to wordle
-# todo add text insert box and HTML POST for data entry
+2/24
+-added win condition to object
+-added additional error handling ot object for non-alpha characters
+-added text insert box and submit button to webpage
+-added reset button to webpage
+-coded POST handling for guess submission
+
 # todo add sliders for guesses and word length
