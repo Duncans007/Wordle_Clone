@@ -3,6 +3,26 @@
 {% block content %}
     <h1>Worldle!</h1>
 
+    {% if guesses_left == True %}
+    <form method='POST'>
+        <input name='worldle_guess'>
+        <input type='submit' name="submit_button" value="Make Guess">
+        <input type="submit" name="submit_button" value="Reset">
+    </form>
+    {% else %}
+    <form method="POST">
+        <input type="submit" name="submit_button" value="Reset">
+    </form>
+    {% endif %}
+
+
+    {% if error_msg != "" %}
+        <p>{{error_msg}}</p>
+    {% else %}
+        <br>
+        <br>
+    {% endif %}
+
     {% for i in range(1,guesses+1) %}
         {% for j in range(0,word_length) %}
 
