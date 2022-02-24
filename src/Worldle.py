@@ -41,15 +41,21 @@ class Worldle:
         # 1: last guess taken, show word
         # 2: guess word not proper length
         # 3: guess word not an actual word
+        # 4: guessed word correctly
+        # 5: is not alpha
 
         ##### Check for error codes
+        # Make sure the word is letters only
+        if not word_guess.isalpha():
+            return [5, "Error 5: Word is not letters only. Please try again with letters only."]
+
         # Make sure the word is the proper length
         if len(word_guess) != self.word_length:
-            return [2, f"Error 2: word is not proper length. Please try again with word length of {self.word_length}."]
+            return [2, f"Error 2: Word is not proper length. Please try again with word length of {self.word_length}."]
 
         # Check if word is in dictionary of valid words
         if word_guess not in self.word_list:
-            return [3, f"Error 3: word is not in dictionary of valid words."]
+            return [3, "Error 3: Word is not in dictionary of valid words."]
 
 
         ##### Check words for matching letters
@@ -67,6 +73,11 @@ class Worldle:
                 matched_output.append(0)
 
 
+        ##### Check for perfectly matching words
+        if matched_output == [1]*self.word_length:
+            return [4, matched_output]
+
+
         ##### Send solution if max guesses is reached
         if self.guesses <= self.max_guesses:
             return [0, matched_output]
@@ -75,3 +86,9 @@ class Worldle:
             self.generate_word()
             return [1, matched_output, output_word]
 
+
+    def output_to_colors(self, matched_outp, colors=['gray', 'green', 'yellow']):
+        outp = []
+        for i in range(0, len(matched_outp)):
+            outp.append(colors[matched_outp[i]])
+        return outp
