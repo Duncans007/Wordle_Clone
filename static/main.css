@@ -1,4 +1,9 @@
-body{
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.body {
     font-family: Verdana;
 }
 
@@ -6,11 +11,11 @@ body{
     float: left;
     height: 100px;
     width: 100px;
-    margin: 1em;
+    margin: 10px;
     border: 0px;
 }
 
-.first-box{
+.first-box {
     clear: both;
 }
 
